@@ -4,6 +4,8 @@ const dotenv =require('dotenv');
 dotenv.config({path : './server/.env' });
 //console.log(process.env)
 const cors = require('cors')
+const productRouter =require('./routes/productRouter')
+
 
 
 //middlewares kontrollerden gecirizorum
@@ -15,5 +17,6 @@ app.use(express.json())
 
 
 require('./db/db')
+app.use('/products',productRouter)
 
 module.exports=app
