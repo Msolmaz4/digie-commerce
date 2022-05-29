@@ -1,7 +1,7 @@
 const express =require('express');
 const app =express();
 const dotenv =require('dotenv');
-dotenv.config({path : './server/.env' });
+dotenv.config({path : '.env' });
 //console.log(process.env)
 const cors = require('cors')
 const productRouter =require('./routes/productRouter')
