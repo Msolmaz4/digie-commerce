@@ -5,6 +5,7 @@ const allProductsController = async (req ,res)=>{
   try{
 
     const {keyword,min_price,max_price,taxonomy_id,page} =req.body
+    if(page <=0) page =1
     let query ={};
     keyword ? query.title = new RegExp(keyword,i) :null
     min_price ? query.price ={['$gte'] : min_price} : null

@@ -5,6 +5,7 @@ dotenv.config({path : './server/.env' });
 //console.log(process.env)
 const cors = require('cors')
 const productRouter =require('./routes/productRouter')
+const userRouter =require('./routes/userRouter')
 
 
 
@@ -18,5 +19,6 @@ app.use(express.json())
 
 require('./db/db')
 app.use('/products',productRouter)
+app.use('/user',userRouter)
 
 module.exports=app
