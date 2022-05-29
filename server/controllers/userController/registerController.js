@@ -1,4 +1,4 @@
-const Users = require('../../models/productsModel')
+const Users = require('../../models/usersModel')
 const bcrypt = require('bcrypt')
 
 
@@ -14,6 +14,9 @@ const registerController = async (req,res)=>{
             email:email,
             password:bcrypt.hashSync(password,8)
         })
+        newUser.save()
+        .then(()=>res.status(200).send('sucess'))
+        .catch((err)=>res.send('sve errror'))
 
     }catch(err){
         console.log(err.message)
