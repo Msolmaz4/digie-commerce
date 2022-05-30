@@ -6,8 +6,8 @@ const addFav = require('../controllers/userController/favController')
 
 router.post('/register',registerController)
 router.post('/login',loginController)
-router.post('/fav/:id'.addFav)
-
+router.post('/fav/:id',addFav)
+router.post('/fav/:id',deleteFav)
 
 
 
