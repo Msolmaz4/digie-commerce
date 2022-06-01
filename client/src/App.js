@@ -4,16 +4,23 @@ import {
   Detail,
   Favorite,
   Home,
-  login,
+  Login,
   Register
 
 } from './pages/index'
 
 function App() {
   return (
-    <div className="App">
-  
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/detail/id' element={<Detail/>}/>
+      <Route path='/favorite' element={<Favorite/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/> 
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 
