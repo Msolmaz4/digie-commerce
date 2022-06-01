@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Favorite() {
+ function Favorite() {
   return (
     <div>Favorite</div>
   )
 }
+
+
+export {Favorite}
