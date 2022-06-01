@@ -5,17 +5,34 @@ import {
   Favorite,
   Home,
   Login,
-  Register
+  Register,
+  Card,
+  Profil
 
 } from './pages/index'
+import PrivateRoute from './router/PrivateRoute';
+
+import PublicRoute from './router/PublicRoute';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
+
+      <Route element={<PublicRoute/>} >
+      <Route path='/' element={<Home/>}/>
       <Route path='/detail/id' element={<Detail/>}/>
-      <Route path='/favorite' element={<Favorite/>}/>
-      <Route path='/home' element={<Home/>}/>
+      </Route>
+     
+
+      <Route element={<PrivateRoute/>}>
+      <Route path='/favorites' element={<Favorite/>}/>
+      <Route path='/profile' element={<Profil/>}/>
+      <Route path='/cart' element={<Card/>}/>
+      </Route>
+      
+
+      
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/> 
     </Routes>
