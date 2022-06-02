@@ -1,5 +1,6 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
+import { UserProvider } from './context/UserContext';
 import {
   Detail,
   Favorite,
@@ -16,6 +17,7 @@ import PublicRoute from './router/PublicRoute';
 
 function App() {
   return (
+    <UserProvider> 
     <BrowserRouter>
     <Routes>
 
@@ -37,6 +39,7 @@ function App() {
       <Route path='/register' element={<Register/>}/> 
     </Routes>
     </BrowserRouter>
+    </UserProvider>
     
   );
 }
