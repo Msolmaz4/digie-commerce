@@ -1,0 +1,15 @@
+.container{
+    border: 5px solid red;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgContainer{
+    width: 60%;
+    border: 5px solid red;
+}
+.img{
+width: 100%;
+}

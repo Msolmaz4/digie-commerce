@@ -3,7 +3,7 @@ export const UserContext = createContext()
 
 
 export const UserProvider = ({children}) => {
- const [isAuthenicated ,setisAuthenicated] = useState(false)
+ const [isAuthenicated ,setisAuthenicated] = useState(true)
 
 
 

@@ -1,6 +1,6 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
-import { UserProvider } from './context/UserContext';
+import { UserProvider } from './Context/UserContext';
 import {
   Detail,
   Favorite,
@@ -21,6 +21,12 @@ function App() {
     <BrowserRouter>
     <Routes>
 
+      
+    <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/> 
+
+
+
       <Route element={<PublicRoute/>} >
       <Route path='/' element={<Home/>}/>
       <Route path='/detail/id' element={<Detail/>}/>
@@ -35,8 +41,6 @@ function App() {
       
 
       
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<Register/>}/> 
     </Routes>
     </BrowserRouter>
     </UserProvider>
