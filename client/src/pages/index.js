@@ -1,7 +1,5 @@
 export*from './Detail'
-export*from './Favorite'
+export*from './Favori'
 export*from './Home'
 export*from './Login'
 export*from './Register'
-export*from './Card'
-export*from './Profil'

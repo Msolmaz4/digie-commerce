@@ -1,49 +1,32 @@
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
+
 import './App.css';
-import { UserProvider } from './Context/UserContext';
+import {BrowserRouter,Routes,Route } from 'react-router-dom'
 import {
   Detail,
-  Favorite,
+  Favori,
   Home,
   Login,
-  Register,
-  Card,
-  Profil
+  Register
+}
+from './pages/index'
 
-} from './pages/index'
-import PrivateRoute from './router/PrivateRoute';
-
-import PublicRoute from './router/PublicRoute';
 
 function App() {
   return (
-    <UserProvider> 
     <BrowserRouter>
-    <Routes>
-
+   
       
-    <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<Register/>}/> 
 
-
-
-      <Route element={<PublicRoute/>} >
+    <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/detail/id' element={<Detail/>}/>
-      </Route>
-     
-
-      <Route element={<PrivateRoute/>}>
-      <Route path='/favorites' element={<Favorite/>}/>
-      <Route path='/profile' element={<Profil/>}/>
-      <Route path='/cart' element={<Card/>}/>
-      </Route>
-      
-
+      <Route path='/favori' element={<Favori/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
       
     </Routes>
+
     </BrowserRouter>
-    </UserProvider>
     
   );
 }

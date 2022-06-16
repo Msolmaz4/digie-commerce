@@ -2,8 +2,8 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div>login</div>
+    <div>Login</div>
   )
 }
 
-export {Login}
+export { Login}
