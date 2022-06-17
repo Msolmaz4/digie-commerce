@@ -14,6 +14,7 @@ export const  UserProvider =({ children}) =>{
     useEffect(()=>{
         const token = localStorage.getItem('token')
         token && checkAuth(token)
+        
 
     },[])
 
