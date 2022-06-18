@@ -13,8 +13,11 @@ import { faUserAlt,faMailBulk} from '@fortawesome/free-solid-svg-icons'
 
 
 
-  const handleInputChange =()=>{
+  const handleInputChange =(e)=>{
+    const name = e.target.name
+    const value = e.target.value 
 
+    inputRef.current[name]=value
   }
   return (
     <div>
@@ -34,7 +37,28 @@ import { faUserAlt,faMailBulk} from '@fortawesome/free-solid-svg-icons'
                   <FontAwesomeIcon icon={faUserAlt} className={styles.icon}/>
                   <input className={styles.input} type='text' name='name' onChange={handleInputChange} />
               </div>
+              <div className={styles.inputContanier}>
+                <label className={styles.input}>Surname</label>
+                <div className={styles.inputGrup}></div>
+                  <FontAwesomeIcon icon={faUserAlt} className={styles.icon}/>
+                  <input className={styles.input} type='text' name='name' onChange={handleInputChange} />
+              </div>
+              <div className={styles.inputContanier}>
+                <label className={styles.input}>Email</label>
+                <div className={styles.inputGrup}></div>
+                  <FontAwesomeIcon icon={faUserAlt} className={styles.icon}/>
+                  <input className={styles.input} type='text' name='name' onChange={handleInputChange} />
+              </div>
+              <div className={styles.inputContanier}>
+                <label className={styles.input}>Password</label>
+                <div className={styles.inputGrup}></div>
+                  <FontAwesomeIcon icon={faUserAlt} className={styles.icon}/>
+                  <input className={styles.input} type='text' name='name' onChange={handleInputChange} />
+              </div>
 
+
+
+                <button type='submit' className={styles.butoon}>Register</button>
             </div>
 
           </form>
