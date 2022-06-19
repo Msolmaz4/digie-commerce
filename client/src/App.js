@@ -18,8 +18,9 @@ import { UserProvider } from './context/UserContex';
 
 function App() {
   return (
-    <UserProvider>
+    
     <BrowserRouter>
+    <UserProvider>
     <Routes>
       <Route element={<PublicRoute/>}>
       <Route path='/' element={<Home/>}/>
@@ -33,8 +34,9 @@ function App() {
       <Route path='/favori' element={<Favori/>}/>
       </Route>
     </Routes>
-    </BrowserRouter>
     </UserProvider>
+    </BrowserRouter>
+    
     
     
   );
