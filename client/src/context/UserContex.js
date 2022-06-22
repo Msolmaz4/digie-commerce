@@ -10,6 +10,8 @@ export const  UserProvider =({ children}) =>{
     const navigate = useNavigate()
 
     const [ isAuthenticated,setIsAuthenticated] = useState(false)
+    const [user,setUser] = useState(null)
+    const [ favs ,setFavs] = useState([])
 
     const register = (e,user)=>{
         e.preventDefault()
@@ -28,6 +30,26 @@ export const  UserProvider =({ children}) =>{
        
     }
 
+
+    const login=(e,user)=>{
+        e.preventDefault()
+        axios.post('http://localhost8000/user/register',user)
+        
+        .then(res=>{
+            console.log('response',res)
+            setIsAuthenticated(true)
+            setUser(res.data)
+            setFavs(res.data.favs)
+            localStorage.setItem('token',res.data.token)
+            navigate('/')
+        })
+        .catch(err =>{
+            console.log('err',err)
+            alert(err)
+        })
+
+    }
+
     const checkAuth = (token) =>{
 
     }
@@ -41,7 +63,7 @@ export const  UserProvider =({ children}) =>{
 
 
     return(
-        <UserContext.Provider value={{isAuthenticated,register}}>
+        <UserContext.Provider value={{isAuthenticated,register,login}}>
         {children}
         </UserContext.Provider>
 
