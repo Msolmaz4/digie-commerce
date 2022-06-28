@@ -25,6 +25,16 @@ getProducts()
   return (
     <div>
       <NavBar/>
+     <div className="ana">
+     <div className="erste">
+
+</div>
+<div className="zweite">
+
+</div>
+
+     </div>
+     
     </div>
   )
 }

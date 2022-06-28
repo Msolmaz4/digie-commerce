@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.ana{
+  display: flex;
+
+}
+.erste{
+  display: grid;
+  border: 2px solid red;
+  height: 400px;
+  width: 20%;
+}
+.zweite{
+  display: grid;
+  height: 400px;
+  width: 80%;
+  border: 2px black solid;
+}
