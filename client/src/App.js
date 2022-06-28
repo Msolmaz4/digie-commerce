@@ -14,6 +14,7 @@ from './pages/index'
 import PublicRoute from './routes/PublicRoute';
 import PrivateRoute from './routes/PrivatRoute';
 import { UserProvider } from './context/UserContex';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

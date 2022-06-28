@@ -1,5 +1,8 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
+import NavBar from '../components/Navbar/NavBar'
+
+
 
 const Home = () => {
  
@@ -20,7 +23,9 @@ getProducts()
 
 
   return (
-    <div>Home</div>
+    <div>
+      <NavBar/>
+    </div>
   )
 }
 
