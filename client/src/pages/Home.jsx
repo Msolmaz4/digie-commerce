@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
+import Filter from '../components/Filter/Filter'
 import NavBar from '../components/Navbar/NavBar'
 
 
@@ -27,6 +28,7 @@ getProducts()
       <NavBar/>
      <div className="ana">
      <div className="erste">
+      <Filter/>
 
 </div>
 <div className="zweite">

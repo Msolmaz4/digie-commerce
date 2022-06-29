@@ -52,3 +52,18 @@
   width: 80%;
   border: 2px black solid;
 }
+#min{
+  display: flex;
+  float: left;
+  padding-left: 10px;
+  padding-right: 20px;
+
+}
+#max{ display:flex ;
+float: left;
+padding-left: 60px;
+}
+#send{
+  
+  text-align: center;
+}
